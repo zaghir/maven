@@ -1,0 +1,66 @@
+run jacoco
+==================
+$ mvn clean verify
+
+
+
+Sonarqube
+https://www.sonarsource.com/products/sonarqube/downloads/
+
+$ cd C:\Devs-and-tools\install\sonarqube-9.9.0.65466\bin\windows-x86-64
+$ StartSonar.bat
+
+
+http://localhost:9000/
+user =  admin
+pass =  admin
+
+changed to
+user = admin
+pass = 123456
+
+generate token from sonar
+my accoun > security >
+
+
+add setting.xml to .m2
+===============================
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <pluginGroups>
+		<pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+     </profiles>
+
+
+</settings>
+
+===========================================================
+
+excute
+=================
+$ mvn clean verify sonar:sonar -Dsonar.login=squ_2ba77451372623c1b00f686ed51553c93f1ed6f8
+
+
+[INFO] ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=com.zaghir.project.jcococ%3Ahellojcoco
+[INFO] Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+[INFO] More about the report processing at http://localhost:9000/api/ce/task?id=AYZ0JKKHuIbzjDFYOYWb
+[INFO] Analysis total time: 26.284 s
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:35 min
+[INFO] Finished at: 2023-02-21T14:23:23+01:00
+[INFO] ------------------------------------------------------------------------
+
+url of rapport
+==================
+http://localhost:9000/dashboard?id=com.zaghir.project.jcococ%3Ahellojcoco

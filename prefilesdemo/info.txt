@@ -1,0 +1,4 @@
+-P  = profile
+mvn clean install -Pdev
+mvn clean install -Ppod
+mvn clean install -Ptest

@@ -1,0 +1,40 @@
+test plugin created and added
+
+$ mvn clean complile
+
+
+resultat
+
+C:\Devs-and-tools\install\Java\open-jdk-18.0.2.1\bin\java.exe -Dmaven.multiModuleProjectDirectory=C:\Users\yzaghir\Downloads\maven_udemy\use-projectinfo-plugin "-Dmaven.home=C:\Devs-and-tools\install\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\plugins\maven\lib\maven3" "-Dclassworlds.conf=C:\Devs-and-tools\install\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\plugins\maven\lib\maven3\bin\m2.conf" "-Dmaven.ext.class.path=C:\Devs-and-tools\install\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\plugins\maven\lib\maven-event-listener.jar" "-javaagent:C:\Devs-and-tools\install\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\lib\idea_rt.jar=60252:C:\Devs-and-tools\install\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Devs-and-tools\install\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Devs-and-tools\install\JetBrains\IntelliJ IDEA Community Edition 2021.3.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license" org.codehaus.classworlds.Launcher -Didea.version=2021.3.3 clean compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -------------< com.zaghir.project:use-projectinfo-plugin >--------------
+[INFO] Building use-projectinfo-plugin 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ use-projectinfo-plugin ---
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ use-projectinfo-plugin ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\yzaghir\Downloads\maven_udemy\use-projectinfo-plugin\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ use-projectinfo-plugin ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\Users\yzaghir\Downloads\maven_udemy\use-projectinfo-plugin\target\classes
+[INFO]
+[INFO] --- projectinfo-maven-plugin:0.0.1-SNAPSHOT:info-renderer (default) @ use-projectinfo-plugin ---
+[INFO] Mojos are cool
+[INFO] Project Name: use-projectinfo-plugin Artifact Id: use-projectinfo-plugin
+[INFO] without filter ============
+[INFO] Dependency {groupId=junit, artifactId=junit, version=3.8.1, type=jar}
+[INFO] with scope filter ============
+[INFO] Dependency {groupId=junit, artifactId=junit, version=3.8.1, type=jar}
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.641 s
+[INFO] Finished at: 2023-02-18T17:46:43+01:00
+[INFO] ------------------------------------------------------------------------
+
+Process finished with exit code 0
